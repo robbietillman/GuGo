@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>add-alarm</title>
+<script type="text/javascript" src="timer.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<main>
+		<div class="row">
+			<div class="col">
+				<div class="dark-ocean">
+					<div class ="create-timer">
+						<form action="/timers" method="POST">
+					
+							<h1>Add Alarm</h1>
+							<label for="time">Select a time:</label>
+							<input type="time" id= "time" name="time" href= "timer.js"><br>
+					
+							<!-- Make a money transfer file -->
+							<label for="cash-amount">Enter cash amount:</label>
+							<input type="number" style="width: 200px" id="money" name="money" min="1"><br>
+					
+							<button id = "add-button" class="plus-sign">Add Alarm</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!--
+	<script>
+		var addButtonEl = document.getElementById("add-button")
+		
+		var onButtonClick = function() {
+			addButtonEl.innerHTML = "yo"
+			console.log("hi")
+		}
+		
+		addButtonEl.addEventListener("click", onButtonClick)
+		</script>
+	-->
+</body>
+</html>

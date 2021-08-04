@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<%- include('../partials/head.ejs') %>
+<body>
+
+	<header>
+		<div class="row">
+			<div class="col">
+				<img class="style-logo" src="images/sunshine.jpg" alt="Prism Logo">
+				<%- include('../partials/nav.ejs') %>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<div class="row">
+			<div class="col">
+				<div class="hero">
+					<h2>All Timers</h2>
+					<% if (timers.length > 0) { %>
+						<% timers.forEach(timer => { %>
+                    		<a href="/timers/<%= timer._id %>">
+								<p><%= timer.title %></p>  
+                    			<p><%= timer.time %></p>
+								<p><%= '$' + timer.money %></p>
+							</a>
+                			<% }) %>
+                
+                			<% } else { %>
+                    			<p> There are no timers to display</p>
+                    			<% } %>
+                </div>
+				
+					<a href="/add-alarm" class="plus-sign">Add Alarm</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-md-one-half">
+				<div class="info-box-dark">
+					<h2>Reflections</h2>
+					<p>Stylish ways to bounce the heat off a roof and the planet.</p>
+					<a href="" class="button">Read More</a>
+				</div>
+			</div>
+		</div>
+	</main>
+	<%- include('../partials/footer.ejs') %>
+</body>
+</html>
